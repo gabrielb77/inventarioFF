@@ -1,0 +1,14 @@
+[infra]
+berlin ansible_host=192.168.114.83
+elk01 ansible_host=133.90.151.9
+nagios ansible_host=133.91.0.50
+
+[win]
+R8AATEST01 ansible_host=133.90.180.2 ansible_user="ansible@sibs.net" ansible_password="Predator2019" ansible_winrm_transport=ntlm ansible_port=5986 ansible_winrm_server_cert_validation=ignore ansible_connection=winrm
+
+[network]
+firewall ansible_host=133.91.0.15 ansible_user=ansible-fw ansible_ssh_pass=9$<Jal),Y/K= ansible_connection=network_cli ansible_network_os=asa
+
+[all:vars]
+ansible_ssh_private_key_file=/home/ansible/.ssh/cred_awx_atos
+ansible_user=ansible
